@@ -1,0 +1,41 @@
+####demo1#####
+###create resources locally####
+
+#cat main.tf
+resource "local_file" "test" {
+  file     = "/root/file.txt"
+  content  = "created this file from the terraform"
+
+#teraform init
+
+#terrafrom plan
+
+#terraform apply
+
+#demo2####
+#make some changes to code to add permission to above code###
+##when terraform is appled this will recreated the file file.txt
+
+#cat main.tf
+resource "local_file" "test" {
+  file     = "/root/file.txt"
+  content  = "created this file from the terraform"
+  file_permission = "0700"
+
+#terrafrom plan
+
+#terraform apply
+
+
+    
+#####demo3####
+####create resource locally and hide the information####
+
+#cat main.tf
+    
+resource "local_sensitive_file" "passwdfile" {
+  filename     = "/root/passwd.txt"
+  content  = "this is some "
+
+
+  
