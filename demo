@@ -38,4 +38,29 @@ resource "local_sensitive_file" "passwdfile" {
   content  = "this is some "
 
 
+###demo4####
+####multi provider###
+
+#cat multi-provider.tf 
+
+resource "local_file" "pet_name" {
+            content = "We love pets!"
+            filename = "/root/pets.txt"
+}
+
+
+resource "random_pet" "my-pet" {
+              prefix = "Mrs"
+              separator = "."
+              length = "1"
+}
+
+#terrafrom plan
+
+#terraform apply
+
+#####
+
+
+
   
