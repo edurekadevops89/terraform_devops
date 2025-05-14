@@ -37,5 +37,50 @@ resource "local_sensitive_file" "passwdfile" {
   filename     = "/root/passwd.txt"
   content  = "this is some "
 
+#terrafrom plan
+
+#terraform apply
+
+###demo4#####
+###create 2 resources at the same time###
+resource "local_file" "myfile" {
+  filename     = "/root/myfile.txt"
+  content  = "This is my created from the terraform run"
+}
+resource "local_file" "myfile2" {
+  filename     = "/root/myfile2.txt"
+  content  = "This is created from the same terraform run!"
+}
+
+#terrafrom plan
+
+#terraform apply
+
+####demo5######
+####we can have multiple .tf file #####
+
+#mkdir multitf
+#cd multitf
+
+#cat myfirst.tf
+resource "local_file" "myfirst" {
+  file     = "/root/myfirst.txt"
+  content  = "created this file from the terraform 1stfile"
+
+#cat mysecond.tf
+resource "local_file" "mysecond" {
+  file     = "/root/mysecond.txt"
+  content  = "created this file from the terraform 2nd file"
+
+#cat mythird.tf
+resource "local_file" "mythird" {
+  file     = "/root/mythird.txt"
+  content  = "created this file from the terraform 3rd file"
+
+#terraform init
+#terraform plan
+#terraform apply
+#terraform destroy
+
 
   
