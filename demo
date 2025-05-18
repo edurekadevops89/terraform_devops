@@ -1,3 +1,13 @@
+###install teraform##
+
+#yum-config-manager --add-repo https://rpm.releases.hashicorp.com/RHEL/hashicorp.repo
+#dnf install terraform -y
+#terraform --version
+
+
+
+
+
 ####demo1#####
 ###create resources locally####
 
@@ -82,5 +92,7 @@ resource "local_file" "mythird" {
 #terraform apply
 #terraform destroy
 
+##dnf install awscli
 
+##aws --version
   
