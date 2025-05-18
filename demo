@@ -22,6 +22,8 @@ resource "local_file" "test" {
 
 #terraform apply
 
+#terraform show
+
 #demo2####
 #make some changes to code to add permission to above code###
 ##when terraform is appled this will recreated the file file.txt
