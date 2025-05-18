@@ -1,0 +1,16 @@
+
+###
+resource "aws_s3_bucket" "saiaheadbucket" {
+  bucket = "saiaheadbucket"   
+  acl    = "private"      
+}
+
+
+
+#####
+resource "aws_s3_object" "upload" {
+  bucket = "saiaheadbucket"
+  key    = "woody.jpg"
+  source = "/root/woody.jpg"
+}
+
