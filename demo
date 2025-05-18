@@ -3,7 +3,7 @@
 
 #cat main.tf
 resource "local_file" "test" {
-  file     = "/root/file.txt"
+  filename     = "/root/file.txt"
   content  = "created this file from the terraform"
 
 #teraform init
@@ -18,7 +18,7 @@ resource "local_file" "test" {
 
 #cat main.tf
 resource "local_file" "test" {
-  file     = "/root/file.txt"
+  filename     = "/root/file.txt"
   content  = "created this file from the terraform"
   file_permission = "0700"
 
