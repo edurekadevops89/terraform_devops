@@ -1,5 +1,6 @@
 ###install teraform##
 
+#dnf install dnf-utils
 #yum-config-manager --add-repo https://rpm.releases.hashicorp.com/RHEL/hashicorp.repo
 #dnf install terraform -y
 #terraform --version
